@@ -40,3 +40,7 @@ model.fit(x_train,y_train, nb_epoch=150, batch_size=10)
 # evaluate the model
 scores = model.evaluate(x_train,y_train)
 print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+
+model.save('Dense')
+model.save_weights('dense_weights.h5')
+
